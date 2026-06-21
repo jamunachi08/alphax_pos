@@ -1,0 +1,283 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sb_setup",
+  "profile_name",
+  "outlet",
+  "vertical",
+  "theme",
+  "cb_p2",
+  "price_list",
+  "default_customer",
+  "vat_template",
+  "vat_rate",
+  "zatca_enabled",
+  "sb_features",
+  "enable_tables",
+  "enable_kot",
+  "enable_modifiers",
+  "enable_recipe",
+  "cb_feat2",
+  "enable_barcode",
+  "enable_weight",
+  "enable_batch_expiry",
+  "enable_room_charge",
+  "enable_delivery",
+  "enable_loyalty",
+  "sb_pay",
+  "payment_modes",
+  "sb_recipe_mode",
+  "backflush_mode",
+  "sb_erp",
+  "erpnext_pos_profile",
+  "loyalty_program",
+  "cb_erp2",
+  "loyalty_redemption_account",
+  "update_stock"
+ ],
+ "fields": [
+  {
+   "fieldname": "sb_setup",
+   "fieldtype": "Section Break",
+   "label": "Setup"
+  },
+  {
+   "fieldname": "profile_name",
+   "fieldtype": "Data",
+   "label": "Profile Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "outlet",
+   "fieldtype": "Link",
+   "label": "Outlet",
+   "options": "AlphaX Outlet",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vertical",
+   "fieldtype": "Select",
+   "label": "Vertical (inherited / override)",
+   "options": "restaurant\ncafe\ncafeteria\nsupermarket\npharmacy\nretail\nhotel",
+   "default": "restaurant",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "theme",
+   "fieldtype": "Link",
+   "label": "Theme",
+   "options": "AlphaX Theme",
+   "default": "majlis-green"
+  },
+  {
+   "fieldname": "cb_p2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price_list",
+   "fieldtype": "Link",
+   "label": "Selling Price List",
+   "options": "Price List"
+  },
+  {
+   "fieldname": "default_customer",
+   "fieldtype": "Link",
+   "label": "Walk-in Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "vat_template",
+   "fieldtype": "Link",
+   "label": "Default Tax Template",
+   "options": "Sales Taxes and Charges Template"
+  },
+  {
+   "fieldname": "vat_rate",
+   "fieldtype": "Percent",
+   "label": "VAT Rate",
+   "default": "15"
+  },
+  {
+   "fieldname": "zatca_enabled",
+   "fieldtype": "Check",
+   "label": "ZATCA e-Invoicing",
+   "default": "1"
+  },
+  {
+   "fieldname": "sb_features",
+   "fieldtype": "Section Break",
+   "label": "Feature Toggles"
+  },
+  {
+   "fieldname": "enable_tables",
+   "fieldtype": "Check",
+   "label": "Tables & Floors",
+   "default": "1"
+  },
+  {
+   "fieldname": "enable_kot",
+   "fieldtype": "Check",
+   "label": "Kitchen Tickets (KOT/KDS)",
+   "default": "1"
+  },
+  {
+   "fieldname": "enable_modifiers",
+   "fieldtype": "Check",
+   "label": "Modifiers",
+   "default": "1"
+  },
+  {
+   "fieldname": "enable_recipe",
+   "fieldtype": "Check",
+   "label": "Recipe / Stock Backflush",
+   "default": "1"
+  },
+  {
+   "fieldname": "cb_feat2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enable_barcode",
+   "fieldtype": "Check",
+   "label": "Barcode Scanning",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_weight",
+   "fieldtype": "Check",
+   "label": "Weighed Items (scale)",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_batch_expiry",
+   "fieldtype": "Check",
+   "label": "Batch / Expiry (pharmacy)",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_room_charge",
+   "fieldtype": "Check",
+   "label": "Room Charge (hotel)",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_delivery",
+   "fieldtype": "Check",
+   "label": "Delivery / Aggregators",
+   "default": "1"
+  },
+  {
+   "fieldname": "enable_loyalty",
+   "fieldtype": "Check",
+   "label": "Loyalty Points",
+   "default": "1"
+  },
+  {
+   "fieldname": "sb_pay",
+   "fieldtype": "Section Break",
+   "label": "Payment Modes"
+  },
+  {
+   "fieldname": "payment_modes",
+   "fieldtype": "Table",
+   "label": "Enabled Payment Modes",
+   "options": "AlphaX Profile Payment Mode"
+  },
+  {
+   "fieldname": "sb_recipe_mode",
+   "fieldtype": "Section Break",
+   "label": "Backflush"
+  },
+  {
+   "fieldname": "backflush_mode",
+   "fieldtype": "Select",
+   "label": "Stock Backflush",
+   "options": "On Payment (realtime)\nBatched (scheduled)",
+   "default": "On Payment (realtime)"
+  },
+  {
+   "fieldname": "sb_erp",
+   "fieldtype": "Section Break",
+   "label": "ERPNext Integration"
+  },
+  {
+   "fieldname": "erpnext_pos_profile",
+   "fieldtype": "Link",
+   "label": "Native POS Profile",
+   "options": "POS Profile",
+   "description": "Optional: bind to a native ERPNext POS Profile for income/write-off accounts & cost center."
+  },
+  {
+   "fieldname": "loyalty_program",
+   "fieldtype": "Link",
+   "label": "Loyalty Program",
+   "options": "Loyalty Program",
+   "description": "Native Loyalty Program used for earning/redeeming points at this profile."
+  },
+  {
+   "fieldname": "cb_erp2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loyalty_redemption_account",
+   "fieldtype": "Link",
+   "label": "Loyalty Redemption Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "update_stock",
+   "fieldtype": "Check",
+   "label": "Post Stock via Sales Invoice (else POS-only)",
+   "default": "0"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX POS Profile",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:profile_name",
+ "naming_rule": "By fieldname",
+ "title_field": "profile_name",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

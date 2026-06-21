@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item_label",
+  "item_label_ar",
+  "category",
+  "item",
+  "cb_mi2",
+  "price",
+  "image",
+  "emoji",
+  "prep_seconds",
+  "sb_flags",
+  "is_86",
+  "has_modifiers",
+  "is_weighed",
+  "tags",
+  "sb_mods",
+  "modifier_groups"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_label",
+   "fieldtype": "Data",
+   "label": "Display Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item_label_ar",
+   "fieldtype": "Data",
+   "label": "Display Name (Arabic)"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Category",
+   "options": "AlphaX Menu Category",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "ERPNext Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "cb_mi2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  },
+  {
+   "fieldname": "emoji",
+   "fieldtype": "Data",
+   "label": "Emoji (fallback)"
+  },
+  {
+   "fieldname": "prep_seconds",
+   "fieldtype": "Int",
+   "label": "Prep Seconds",
+   "default": "0"
+  },
+  {
+   "fieldname": "sb_flags",
+   "fieldtype": "Section Break",
+   "label": "Flags"
+  },
+  {
+   "fieldname": "is_86",
+   "fieldtype": "Check",
+   "label": "86'd (out of stock)",
+   "default": "0",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "has_modifiers",
+   "fieldtype": "Check",
+   "label": "Has Modifiers",
+   "default": "0"
+  },
+  {
+   "fieldname": "is_weighed",
+   "fieldtype": "Check",
+   "label": "Sold by Weight",
+   "default": "0"
+  },
+  {
+   "fieldname": "tags",
+   "fieldtype": "Small Text",
+   "label": "Tags (veg, spicy, nuts)"
+  },
+  {
+   "fieldname": "sb_mods",
+   "fieldtype": "Section Break",
+   "label": "Modifier Groups"
+  },
+  {
+   "fieldname": "modifier_groups",
+   "fieldtype": "Table",
+   "label": "Modifier Groups",
+   "options": "AlphaX Item Modifier Link"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Menu Item",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:item_label",
+ "naming_rule": "By fieldname",
+ "title_field": "item_label",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

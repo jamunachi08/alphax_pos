@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_mode",
+  "amount",
+  "tendered",
+  "change_given",
+  "reference",
+  "card_scheme",
+  "masked_pan",
+  "rrn",
+  "terminal_txn_id",
+  "approved"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_mode",
+   "fieldtype": "Link",
+   "label": "Mode",
+   "options": "AlphaX Payment Mode",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tendered",
+   "fieldtype": "Currency",
+   "label": "Tendered",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "change_given",
+   "fieldtype": "Currency",
+   "label": "Change Given"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference / Auth"
+  },
+  {
+   "fieldname": "card_scheme",
+   "fieldtype": "Data",
+   "label": "Card Scheme"
+  },
+  {
+   "fieldname": "masked_pan",
+   "fieldtype": "Data",
+   "label": "Masked PAN"
+  },
+  {
+   "fieldname": "rrn",
+   "fieldtype": "Data",
+   "label": "RRN"
+  },
+  {
+   "fieldname": "terminal_txn_id",
+   "fieldtype": "Data",
+   "label": "Terminal Txn ID"
+  },
+  {
+   "fieldname": "approved",
+   "fieldtype": "Check",
+   "label": "Approved",
+   "default": "1"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Order Payment",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "permissions": []
+}

@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "floor_name",
+  "floor_name_ar",
+  "outlet",
+  "sort",
+  "floor_image",
+  "plan_section",
+  "plan_html"
+ ],
+ "fields": [
+  {
+   "fieldname": "floor_name",
+   "fieldtype": "Data",
+   "label": "Floor Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "floor_name_ar",
+   "fieldtype": "Data",
+   "label": "Floor Name (Arabic)"
+  },
+  {
+   "fieldname": "outlet",
+   "fieldtype": "Link",
+   "label": "Outlet",
+   "options": "AlphaX Outlet",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sort",
+   "fieldtype": "Int",
+   "label": "Sort",
+   "default": "0"
+  },
+  {
+   "fieldname": "floor_image",
+   "fieldtype": "Attach Image",
+   "label": "Floor Plan Image"
+  },
+  {
+   "fieldname": "plan_section",
+   "fieldtype": "Section Break",
+   "label": "Floor Plan"
+  },
+  {
+   "fieldname": "plan_html",
+   "fieldtype": "HTML",
+   "label": ""
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Floor",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:floor_name",
+ "naming_rule": "By fieldname",
+ "title_field": "floor_name",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

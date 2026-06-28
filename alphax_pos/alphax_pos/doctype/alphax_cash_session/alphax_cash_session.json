@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "session_no",
+  "terminal",
+  "cashier",
+  "status",
+  "cb_cs2",
+  "opened_at",
+  "opening_float",
+  "closed_at",
+  "sb_count",
+  "expected_cash",
+  "counted_cash",
+  "variance",
+  "cb_cs3",
+  "total_sales",
+  "total_card",
+  "total_returns",
+  "sb_moves",
+  "movements"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "CASH-.YYYY.-",
+   "default": "CASH-.YYYY.-",
+   "hidden": 1
+  },
+  {
+   "fieldname": "session_no",
+   "fieldtype": "Data",
+   "label": "Session No",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "terminal",
+   "fieldtype": "Link",
+   "label": "Terminal",
+   "options": "AlphaX Terminal",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cashier",
+   "fieldtype": "Link",
+   "label": "Cashier",
+   "options": "User",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "open\nshift_closed\nday_closed",
+   "default": "open",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_cs2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opened_at",
+   "fieldtype": "Datetime",
+   "label": "Opened At"
+  },
+  {
+   "fieldname": "opening_float",
+   "fieldtype": "Currency",
+   "label": "Opening Float"
+  },
+  {
+   "fieldname": "closed_at",
+   "fieldtype": "Datetime",
+   "label": "Closed At"
+  },
+  {
+   "fieldname": "sb_count",
+   "fieldtype": "Section Break",
+   "label": "Reconciliation"
+  },
+  {
+   "fieldname": "expected_cash",
+   "fieldtype": "Currency",
+   "label": "Expected Cash",
+   "read_only": 1
+  },
+  {
+   "fieldname": "counted_cash",
+   "fieldtype": "Currency",
+   "label": "Counted Cash"
+  },
+  {
+   "fieldname": "variance",
+   "fieldtype": "Currency",
+   "label": "Variance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_cs3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_sales",
+   "fieldtype": "Currency",
+   "label": "Total Sales",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_card",
+   "fieldtype": "Currency",
+   "label": "Card Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_returns",
+   "fieldtype": "Currency",
+   "label": "Returns",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_moves",
+   "fieldtype": "Section Break",
+   "label": "Cash Movements"
+  },
+  {
+   "fieldname": "movements",
+   "fieldtype": "Table",
+   "label": "Movements",
+   "options": "AlphaX Cash Movement"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Cash Session",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "session_no",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

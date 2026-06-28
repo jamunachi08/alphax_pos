@@ -1,0 +1,145 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "outlet_name",
+  "outlet_name_ar",
+  "company",
+  "vertical",
+  "cb_o2",
+  "warehouse",
+  "cr_number",
+  "vat_number",
+  "sb_addr",
+  "address",
+  "phone",
+  "cb_o3",
+  "opening_time",
+  "closing_time"
+ ],
+ "fields": [
+  {
+   "fieldname": "outlet_name",
+   "fieldtype": "Data",
+   "label": "Outlet Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "outlet_name_ar",
+   "fieldtype": "Data",
+   "label": "Outlet Name (Arabic)"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vertical",
+   "fieldtype": "Select",
+   "label": "Vertical",
+   "options": "restaurant\ncafe\ncafeteria\nsupermarket\npharmacy\nretail\nhotel",
+   "default": "restaurant",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_o2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Default Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "cr_number",
+   "fieldtype": "Data",
+   "label": "CR Number"
+  },
+  {
+   "fieldname": "vat_number",
+   "fieldtype": "Data",
+   "label": "VAT Number"
+  },
+  {
+   "fieldname": "sb_addr",
+   "fieldtype": "Section Break",
+   "label": "Address & Hours"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "cb_o3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opening_time",
+   "fieldtype": "Time",
+   "label": "Opening Time"
+  },
+  {
+   "fieldname": "closing_time",
+   "fieldtype": "Time",
+   "label": "Closing Time"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Outlet",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:outlet_name",
+ "naming_rule": "By fieldname",
+ "title_field": "outlet_name",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

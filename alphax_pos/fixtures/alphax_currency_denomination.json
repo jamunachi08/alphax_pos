@@ -1,0 +1,102 @@
+[
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "SAR 500",
+  "label": "SAR 500",
+  "currency": "SAR",
+  "value": 500,
+  "kind": "note",
+  "enabled": 1,
+  "sort": 0
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "SAR 200",
+  "label": "SAR 200",
+  "currency": "SAR",
+  "value": 200,
+  "kind": "note",
+  "enabled": 1,
+  "sort": 1
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "SAR 100",
+  "label": "SAR 100",
+  "currency": "SAR",
+  "value": 100,
+  "kind": "note",
+  "enabled": 1,
+  "sort": 2
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "SAR 50",
+  "label": "SAR 50",
+  "currency": "SAR",
+  "value": 50,
+  "kind": "note",
+  "enabled": 1,
+  "sort": 3
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "SAR 10",
+  "label": "SAR 10",
+  "currency": "SAR",
+  "value": 10,
+  "kind": "note",
+  "enabled": 1,
+  "sort": 4
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "SAR 5",
+  "label": "SAR 5",
+  "currency": "SAR",
+  "value": 5,
+  "kind": "note",
+  "enabled": 1,
+  "sort": 5
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "SAR 1",
+  "label": "SAR 1",
+  "currency": "SAR",
+  "value": 1,
+  "kind": "coin",
+  "enabled": 1,
+  "sort": 6
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "50 halala",
+  "label": "50 halala",
+  "currency": "SAR",
+  "value": 0.5,
+  "kind": "coin",
+  "enabled": 1,
+  "sort": 7
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "25 halala",
+  "label": "25 halala",
+  "currency": "SAR",
+  "value": 0.25,
+  "kind": "coin",
+  "enabled": 1,
+  "sort": 8
+ },
+ {
+  "doctype": "AlphaX Currency Denomination",
+  "name": "10 halala",
+  "label": "10 halala",
+  "currency": "SAR",
+  "value": 0.1,
+  "kind": "coin",
+  "enabled": 1,
+  "sort": 9
+ }
+]

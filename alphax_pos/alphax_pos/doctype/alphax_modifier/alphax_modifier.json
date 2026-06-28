@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "modifier_name",
+  "modifier_name_ar",
+  "price_delta",
+  "recipe_delta"
+ ],
+ "fields": [
+  {
+   "fieldname": "modifier_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "modifier_name_ar",
+   "fieldtype": "Data",
+   "label": "Name (Arabic)"
+  },
+  {
+   "fieldname": "price_delta",
+   "fieldtype": "Currency",
+   "label": "Price +/-",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "recipe_delta",
+   "fieldtype": "Code",
+   "label": "Recipe Delta (JSON)",
+   "options": "JSON"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Modifier",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "permissions": []
+}

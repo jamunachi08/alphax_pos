@@ -1,0 +1,28 @@
+{
+  "name": "alphax-pos-terminal",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/assets/alphax_pos/pos/ && node scripts/copy-html-entry.js",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "frappe-react-sdk": "^1.14.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "~5.4.5",
+    "vite": "^5.4.19"
+  }
+}

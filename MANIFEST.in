@@ -1,0 +1,6 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+recursive-include alphax_pos *
+recursive-exclude alphax_pos *.pyc

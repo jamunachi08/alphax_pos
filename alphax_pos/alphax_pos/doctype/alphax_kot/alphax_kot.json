@@ -1,0 +1,128 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "kot_no",
+  "order",
+  "station",
+  "status",
+  "course",
+  "fired_at",
+  "bumped_at",
+  "sb_lines",
+  "lines"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "KOT-.YYYY.-",
+   "default": "KOT-.YYYY.-",
+   "hidden": 1
+  },
+  {
+   "fieldname": "kot_no",
+   "fieldtype": "Data",
+   "label": "KOT No",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Link",
+   "label": "Order",
+   "options": "AlphaX POS Order",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "station",
+   "fieldtype": "Link",
+   "label": "Station",
+   "options": "AlphaX Kitchen Station",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "new\npreparing\nready\nbumped",
+   "default": "new",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "course",
+   "fieldtype": "Data",
+   "label": "Course"
+  },
+  {
+   "fieldname": "fired_at",
+   "fieldtype": "Datetime",
+   "label": "Fired At"
+  },
+  {
+   "fieldname": "bumped_at",
+   "fieldtype": "Datetime",
+   "label": "Bumped At"
+  },
+  {
+   "fieldname": "sb_lines",
+   "fieldtype": "Section Break",
+   "label": "Lines"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "KOT Lines",
+   "options": "AlphaX KOT Line"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX KOT",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "kot_no",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

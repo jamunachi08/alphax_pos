@@ -1,0 +1,49 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "movement_type",
+  "amount",
+  "reason",
+  "at"
+ ],
+ "fields": [
+  {
+   "fieldname": "movement_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "pay_in\npay_out\ndrop\nno_sale",
+   "default": "pay_in",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Data",
+   "label": "Reason",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "at",
+   "fieldtype": "Datetime",
+   "label": "At"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Cash Movement",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "istable": 1,
+ "permissions": []
+}

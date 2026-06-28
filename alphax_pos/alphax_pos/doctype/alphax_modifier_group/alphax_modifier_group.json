@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "group_name",
+  "group_name_ar",
+  "min_select",
+  "max_select",
+  "required",
+  "sb_choices",
+  "modifiers"
+ ],
+ "fields": [
+  {
+   "fieldname": "group_name",
+   "fieldtype": "Data",
+   "label": "Group Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "group_name_ar",
+   "fieldtype": "Data",
+   "label": "Group Name (Arabic)"
+  },
+  {
+   "fieldname": "min_select",
+   "fieldtype": "Int",
+   "label": "Min Select",
+   "default": "0"
+  },
+  {
+   "fieldname": "max_select",
+   "fieldtype": "Int",
+   "label": "Max Select",
+   "default": "1"
+  },
+  {
+   "fieldname": "required",
+   "fieldtype": "Check",
+   "label": "Required",
+   "default": "0"
+  },
+  {
+   "fieldname": "sb_choices",
+   "fieldtype": "Section Break",
+   "label": "Choices"
+  },
+  {
+   "fieldname": "modifiers",
+   "fieldtype": "Table",
+   "label": "Modifiers",
+   "options": "AlphaX Modifier"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Modifier Group",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:group_name",
+ "naming_rule": "By fieldname",
+ "title_field": "group_name",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "mode_id",
+  "mode_name",
+  "mode_name_ar",
+  "kind",
+  "mode_of_payment",
+  "icon",
+  "opens_cash_drawer",
+  "requires_terminal",
+  "requires_reference",
+  "enabled",
+  "sort"
+ ],
+ "fields": [
+  {
+   "fieldname": "mode_id",
+   "fieldtype": "Data",
+   "label": "Mode ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "mode_name",
+   "fieldtype": "Data",
+   "label": "Display Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "mode_name_ar",
+   "fieldtype": "Data",
+   "label": "Display Name (Arabic)"
+  },
+  {
+   "fieldname": "kind",
+   "fieldtype": "Select",
+   "label": "Kind",
+   "options": "cash\ncard\nwallet\ntransfer\ncredit\nloyalty\nvoucher\nroom_charge\nmeal_credit\nsplit",
+   "default": "card",
+   "in_list_view": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "ERPNext Mode of Payment",
+   "options": "Mode of Payment",
+   "description": "Maps this tender to a native Mode of Payment so receipts post to the right GL account."
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Data",
+   "label": "Icon (emoji or class)"
+  },
+  {
+   "fieldname": "opens_cash_drawer",
+   "fieldtype": "Check",
+   "label": "Opens Cash Drawer",
+   "default": "0"
+  },
+  {
+   "fieldname": "requires_terminal",
+   "fieldtype": "Check",
+   "label": "Routes to Card Reader (ECR)",
+   "default": "0"
+  },
+  {
+   "fieldname": "requires_reference",
+   "fieldtype": "Check",
+   "label": "Requires Reference / Auth No.",
+   "default": "0"
+  },
+  {
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sort",
+   "fieldtype": "Int",
+   "label": "Sort Order",
+   "default": "0"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Payment Mode",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:mode_id",
+ "naming_rule": "By fieldname",
+ "title_field": "mode_name",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

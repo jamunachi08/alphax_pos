@@ -1,0 +1,14 @@
+[
+ {
+  "doctype": "Role",
+  "name": "AlphaX POS Manager",
+  "role_name": "AlphaX POS Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "AlphaX POS User",
+  "role_name": "AlphaX POS User",
+  "desk_access": 1
+ }
+]

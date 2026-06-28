@@ -1,0 +1,261 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sb_identity",
+  "brand_name",
+  "legal_name",
+  "tagline",
+  "tagline_ar",
+  "cb_logo",
+  "logo_light",
+  "logo_dark",
+  "app_icon",
+  "favicon",
+  "sb_theme",
+  "primary_theme",
+  "allow_theme_switch",
+  "allow_theme_custom",
+  "force_mode",
+  "cb_login",
+  "login_background",
+  "login_message",
+  "show_powered_by",
+  "sb_receipt",
+  "receipt_header",
+  "receipt_header_ar",
+  "receipt_footer",
+  "cb_contact",
+  "support_email",
+  "support_phone",
+  "website",
+  "sb_locale",
+  "default_language",
+  "enable_arabic",
+  "currency",
+  "currency_symbol",
+  "custom_domain"
+ ],
+ "fields": [
+  {
+   "fieldname": "sb_identity",
+   "fieldtype": "Section Break",
+   "label": "Brand Identity"
+  },
+  {
+   "fieldname": "brand_name",
+   "fieldtype": "Data",
+   "label": "Brand Name",
+   "reqd": 1,
+   "default": "AlphaX POS"
+  },
+  {
+   "fieldname": "legal_name",
+   "fieldtype": "Data",
+   "label": "Legal / Company Name"
+  },
+  {
+   "fieldname": "tagline",
+   "fieldtype": "Data",
+   "label": "Tagline"
+  },
+  {
+   "fieldname": "tagline_ar",
+   "fieldtype": "Data",
+   "label": "Tagline (Arabic)"
+  },
+  {
+   "fieldname": "cb_logo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "logo_light",
+   "fieldtype": "Attach Image",
+   "label": "Logo (light backgrounds)"
+  },
+  {
+   "fieldname": "logo_dark",
+   "fieldtype": "Attach Image",
+   "label": "Logo (dark backgrounds)"
+  },
+  {
+   "fieldname": "app_icon",
+   "fieldtype": "Attach Image",
+   "label": "App Icon (square)"
+  },
+  {
+   "fieldname": "favicon",
+   "fieldtype": "Attach Image",
+   "label": "Favicon"
+  },
+  {
+   "fieldname": "sb_theme",
+   "fieldtype": "Section Break",
+   "label": "Appearance"
+  },
+  {
+   "fieldname": "primary_theme",
+   "fieldtype": "Link",
+   "label": "Default Theme",
+   "options": "AlphaX Theme"
+  },
+  {
+   "fieldname": "allow_theme_switch",
+   "fieldtype": "Check",
+   "label": "Let staff switch theme on terminal",
+   "default": "1"
+  },
+  {
+   "fieldname": "allow_theme_custom",
+   "fieldtype": "Check",
+   "label": "Allow theme customization (color tweaks)",
+   "default": "1"
+  },
+  {
+   "fieldname": "force_mode",
+   "fieldtype": "Select",
+   "label": "Force Light/Dark",
+   "options": "Auto\nLight\nDark",
+   "default": "Auto"
+  },
+  {
+   "fieldname": "cb_login",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "login_background",
+   "fieldtype": "Attach Image",
+   "label": "Login Background"
+  },
+  {
+   "fieldname": "login_message",
+   "fieldtype": "Small Text",
+   "label": "Login Welcome Message"
+  },
+  {
+   "fieldname": "show_powered_by",
+   "fieldtype": "Check",
+   "label": "Show 'Powered by AlphaX'",
+   "default": "0"
+  },
+  {
+   "fieldname": "sb_receipt",
+   "fieldtype": "Section Break",
+   "label": "Receipt & Documents"
+  },
+  {
+   "fieldname": "receipt_header",
+   "fieldtype": "Small Text",
+   "label": "Receipt Header"
+  },
+  {
+   "fieldname": "receipt_header_ar",
+   "fieldtype": "Small Text",
+   "label": "Receipt Header (Arabic)"
+  },
+  {
+   "fieldname": "receipt_footer",
+   "fieldtype": "Small Text",
+   "label": "Receipt Footer (e.g. Thank you)"
+  },
+  {
+   "fieldname": "cb_contact",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "support_email",
+   "fieldtype": "Data",
+   "label": "Support Email"
+  },
+  {
+   "fieldname": "support_phone",
+   "fieldtype": "Data",
+   "label": "Support Phone"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Data",
+   "label": "Website"
+  },
+  {
+   "fieldname": "sb_locale",
+   "fieldtype": "Section Break",
+   "label": "Localization"
+  },
+  {
+   "fieldname": "default_language",
+   "fieldtype": "Select",
+   "label": "Default Language",
+   "options": "en\nar",
+   "default": "en"
+  },
+  {
+   "fieldname": "enable_arabic",
+   "fieldtype": "Check",
+   "label": "Enable Arabic / RTL",
+   "default": "1"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency",
+   "default": "SAR"
+  },
+  {
+   "fieldname": "currency_symbol",
+   "fieldtype": "Data",
+   "label": "Currency Symbol",
+   "default": "SAR"
+  },
+  {
+   "fieldname": "custom_domain",
+   "fieldtype": "Data",
+   "label": "Custom Domain (informational)"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Branding",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "issingle": 1,
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

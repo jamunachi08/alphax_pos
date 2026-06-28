@@ -1,0 +1,153 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "theme_id",
+  "theme_name",
+  "theme_name_ar",
+  "base",
+  "vertical_tag",
+  "is_preset",
+  "sb_colors",
+  "brand",
+  "brand_deep",
+  "cb_acc",
+  "accent",
+  "accent_deep",
+  "sb_tokens",
+  "tokens_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "theme_id",
+   "fieldtype": "Data",
+   "label": "Theme ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "theme_name",
+   "fieldtype": "Data",
+   "label": "Theme Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "theme_name_ar",
+   "fieldtype": "Data",
+   "label": "Theme Name (Arabic)"
+  },
+  {
+   "fieldname": "base",
+   "fieldtype": "Select",
+   "label": "Base Palette",
+   "options": "warm\ncool\npure\ndark\ndarkwarm",
+   "default": "warm",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vertical_tag",
+   "fieldtype": "Data",
+   "label": "Suited For",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "is_preset",
+   "fieldtype": "Check",
+   "label": "Preset (read-only library theme)",
+   "default": "0"
+  },
+  {
+   "fieldname": "sb_colors",
+   "fieldtype": "Section Break",
+   "label": "Colors"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "brand_deep",
+   "fieldtype": "Data",
+   "label": "Brand Deep",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_acc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accent",
+   "fieldtype": "Data",
+   "label": "Accent",
+   "reqd": 1
+  },
+  {
+   "fieldname": "accent_deep",
+   "fieldtype": "Data",
+   "label": "Accent Deep",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_tokens",
+   "fieldtype": "Section Break",
+   "label": "Resolved Tokens (JSON, computed)"
+  },
+  {
+   "fieldname": "tokens_json",
+   "fieldtype": "Code",
+   "label": "Tokens JSON",
+   "options": "JSON",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Theme",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:theme_id",
+ "naming_rule": "By fieldname",
+ "title_field": "theme_name",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

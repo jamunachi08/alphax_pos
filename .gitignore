@@ -1,0 +1,13 @@
+# Node / Vite (frontend source build artifacts that are NOT committed)
+posTerminal/node_modules/
+posTerminal/preview-dist/
+posTerminal/.vite/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# NOTE: alphax_pos/public/pos/** and alphax_pos/www/pos/index.html ARE committed
+# (the built SPA bundle that Frappe Cloud serves without a server-side build).

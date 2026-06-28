@@ -1,0 +1,170 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "card_no",
+  "card_type",
+  "customer",
+  "customer_name",
+  "cb_lc2",
+  "loyalty_program",
+  "mobile",
+  "barcode",
+  "status",
+  "sb_pts",
+  "tier",
+  "points_balance",
+  "points_value",
+  "cb_lc3",
+  "issued_on",
+  "expiry"
+ ],
+ "fields": [
+  {
+   "fieldname": "card_no",
+   "fieldtype": "Data",
+   "label": "Card No",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "card_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "virtual\nphysical",
+   "default": "virtual",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "fetch_from": "customer.customer_name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_lc2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "loyalty_program",
+   "fieldtype": "Link",
+   "label": "Loyalty Program",
+   "options": "Loyalty Program",
+   "description": "Native ERPNext Loyalty Program \u2014 drives earn rules, tiers & point value."
+  },
+  {
+   "fieldname": "mobile",
+   "fieldtype": "Data",
+   "label": "Mobile"
+  },
+  {
+   "fieldname": "barcode",
+   "fieldtype": "Data",
+   "label": "Barcode / Scan Code"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nBlocked\nExpired",
+   "default": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_pts",
+   "fieldtype": "Section Break",
+   "label": "Points"
+  },
+  {
+   "fieldname": "tier",
+   "fieldtype": "Data",
+   "label": "Tier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "points_balance",
+   "fieldtype": "Float",
+   "label": "Points Balance",
+   "read_only": 1,
+   "in_list_view": 1,
+   "description": "Live balance from native Loyalty Point Entry (non-expired)."
+  },
+  {
+   "fieldname": "points_value",
+   "fieldtype": "Currency",
+   "label": "Points Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_lc3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "issued_on",
+   "fieldtype": "Date",
+   "label": "Issued On"
+  },
+  {
+   "fieldname": "expiry",
+   "fieldtype": "Date",
+   "label": "Card Expiry"
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX Loyalty Card",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "field:card_no",
+ "naming_rule": "By fieldname",
+ "title_field": "customer_name",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

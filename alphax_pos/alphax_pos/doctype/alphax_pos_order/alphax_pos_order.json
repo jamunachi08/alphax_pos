@@ -1,0 +1,308 @@
+{
+ "actions": [],
+ "creation": "2026-01-01 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "sb_head",
+  "order_no",
+  "pos_profile",
+  "terminal",
+  "order_type",
+  "channel",
+  "cb_o2",
+  "table",
+  "customer",
+  "status",
+  "aggregator_ref",
+  "is_return",
+  "return_reason",
+  "original_order",
+  "sb_lines",
+  "lines",
+  "sb_tot",
+  "subtotal",
+  "discount",
+  "vat",
+  "cb_t2",
+  "total",
+  "paid",
+  "balance",
+  "tendered_cash",
+  "change_due",
+  "sb_pay",
+  "payments",
+  "sb_zatca",
+  "zatca_uuid",
+  "zatca_qr",
+  "sales_invoice",
+  "cash_session",
+  "stock_issued",
+  "stock_entry"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "AXP-.YYYY.-",
+   "default": "AXP-.YYYY.-",
+   "hidden": 1
+  },
+  {
+   "fieldname": "sb_head",
+   "fieldtype": "Section Break",
+   "label": "Header"
+  },
+  {
+   "fieldname": "order_no",
+   "fieldtype": "Data",
+   "label": "Order No",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "pos_profile",
+   "fieldtype": "Link",
+   "label": "POS Profile",
+   "options": "AlphaX POS Profile",
+   "reqd": 1
+  },
+  {
+   "fieldname": "terminal",
+   "fieldtype": "Link",
+   "label": "Terminal",
+   "options": "AlphaX Terminal"
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "dine_in\ntakeaway\ndelivery\nkiosk\nqr",
+   "default": "dine_in",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Data",
+   "label": "Channel",
+   "default": "pos",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb_o2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "table",
+   "fieldtype": "Link",
+   "label": "Table",
+   "options": "AlphaX Table"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "open\nheld\nfired\nserved\npaid\nvoid\nreturned",
+   "default": "open",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "aggregator_ref",
+   "fieldtype": "Data",
+   "label": "Aggregator Reference"
+  },
+  {
+   "fieldname": "is_return",
+   "fieldtype": "Check",
+   "label": "Is Sales Return",
+   "default": "0"
+  },
+  {
+   "fieldname": "return_reason",
+   "fieldtype": "Small Text",
+   "label": "Return Reason",
+   "depends_on": "is_return"
+  },
+  {
+   "fieldname": "original_order",
+   "fieldtype": "Link",
+   "label": "Original Order",
+   "options": "AlphaX POS Order",
+   "depends_on": "is_return"
+  },
+  {
+   "fieldname": "sb_lines",
+   "fieldtype": "Section Break",
+   "label": "Lines"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Order Lines",
+   "options": "AlphaX Order Line"
+  },
+  {
+   "fieldname": "sb_tot",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "subtotal",
+   "fieldtype": "Currency",
+   "label": "Subtotal",
+   "read_only": 1
+  },
+  {
+   "fieldname": "discount",
+   "fieldtype": "Currency",
+   "label": "Discount"
+  },
+  {
+   "fieldname": "vat",
+   "fieldtype": "Currency",
+   "label": "VAT",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_t2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "paid",
+   "fieldtype": "Currency",
+   "label": "Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Currency",
+   "label": "Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tendered_cash",
+   "fieldtype": "Currency",
+   "label": "Cash Tendered"
+  },
+  {
+   "fieldname": "change_due",
+   "fieldtype": "Currency",
+   "label": "Change Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_pay",
+   "fieldtype": "Section Break",
+   "label": "Payments"
+  },
+  {
+   "fieldname": "payments",
+   "fieldtype": "Table",
+   "label": "Payments",
+   "options": "AlphaX Order Payment"
+  },
+  {
+   "fieldname": "sb_zatca",
+   "fieldtype": "Section Break",
+   "label": "Compliance"
+  },
+  {
+   "fieldname": "zatca_uuid",
+   "fieldtype": "Data",
+   "label": "ZATCA UUID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "zatca_qr",
+   "fieldtype": "Small Text",
+   "label": "ZATCA QR (base64)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Link",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cash_session",
+   "fieldtype": "Link",
+   "label": "Cash Session",
+   "options": "AlphaX Cash Session"
+  },
+  {
+   "fieldname": "stock_issued",
+   "fieldtype": "Check",
+   "label": "Stock Issued (backflushed)",
+   "default": "0",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "label": "Stock Issue Entry",
+   "options": "Stock Entry",
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "module": "Alphax Pos",
+ "name": "AlphaX POS Order",
+ "owner": "Administrator",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "autoname": "naming_series:",
+ "naming_rule": "By \"Naming Series\" field",
+ "title_field": "order_no",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "AlphaX POS User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "print": 1
+  }
+ ]
+}

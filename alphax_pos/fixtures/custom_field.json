@@ -1,0 +1,15 @@
+[
+ {
+  "doctype": "Custom Field",
+  "name": "Stock Entry-alphax_pos_order",
+  "dt": "Stock Entry",
+  "fieldname": "alphax_pos_order",
+  "label": "AlphaX POS Order",
+  "fieldtype": "Data",
+  "read_only": 1,
+  "insert_after": "stock_entry_type",
+  "unique": 1,
+  "no_copy": 1,
+  "module": "Alphax Pos"
+ }
+]

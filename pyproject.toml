@@ -1,7 +1,7 @@
 [project]
 name = "alphax_pos"
 version = "0.3.0"
-description = "AlphaX POS — multi-vertical, white-label point of sale for ERPNext (KSA/GCC)."
+description = "AlphaX POS — multi-vertical, white-label point of sale for ERPNext"
 authors = [{ name = "Neotec Integrated Solution", email = "support@neotec.ai" }]
 requires-python = ">=3.10"
 readme = "README.md"
